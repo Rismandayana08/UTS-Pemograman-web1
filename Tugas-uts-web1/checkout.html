@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Toko Buku Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-page">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="dashboard.html">
+                    <img src="aset/bookstore_logo.png" alt="BookStore Logo" class="header-logo">
+                    <span>BookStore</span> 
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Cari buku...">
+                <button>🔎</button>
+            </div>
+
+            <div class="nav-icons">
+                <a href="stok.html" class="icon-link" title="Katalog">📚</a>
+                <a href="checkout.html" class="icon-link" title="Pemesanan">🛒</a>
+                <a href="tracking.html" class="icon-link" title="Tracking">🚚</a>
+                <a href="#" onclick="handleLogout()" class="icon-link" title="Logout">🚪</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Halaman Pemesanan (Checkout)</h1>
+        <hr>
+
+        <h2>Detail Keranjang Belanja</h2>
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Kode Barang</th>
+                    <th>Nama Barang</th>
+                    <th>Harga Satuan</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="cartTableBody">
+                </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align: right;"><strong>Total Pembayaran:</strong></td>
+                    <td colspan="2"><strong id="grandTotal">Rp 0</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+        
+        <br>
+        <h2>Informasi Pemesan & Pembayaran</h2>
+        <form id="checkoutForm">
+            <label for="namaPemesan">Nama Lengkap</label>
+            <input type="text" id="namaPemesan" required>
+
+            <label for="alamat">Alamat Pengiriman</label>
+            <textarea id="alamat" rows="4" required></textarea>
+
+            <label for="metodeBayar">Metode Pembayaran</label>
+            <select id="metodeBayar" required>
+                <option value="">Pilih Metode</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="cod">COD (Bayar di Tempat)</option>
+            </select>
+
+            <button type="submit" style="width: 100%;">Konfirmasi Pemesanan</button>
+        </form>
+    </div>
+
+    <script src="data.mjs"></script>
+    <script src="script.js"></script>
+</body>
+</html>

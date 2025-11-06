@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Buku Online</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/logins/login-9/assets/css/login-9.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <section class="py-3 py-md-5 py-xl-8 login-section-bg" style="background-color: #f7f7f7 !important;">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          
+          <div class="col-12 col-md-6 col-xl-7">
+            <div class="d-flex justify-content-center text-white p-5 h-100" id="brand-column">
+              <div class="col-12 col-xl-9 text-center text-xl-start">
+                
+                <img src="aset/bookstore_logo.png" alt="BookStore Logo" class="login-brand-logo mb-3">
+                
+                <h1 class="display-5 fw-bold mb-4">BookStore</h1>
+                <p class="lead mb-5">Solusi pemesanan dan pelacakan buku ajar Anda dengan mudah dan cepat.</p>
+                
+                <div class="text-center mt-5">
+                    <p style="color: rgba(51, 51, 51, 0.7);">Front-end App Project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6 col-xl-5">
+            <div class="card border-0 rounded-4 shadow-lg">
+              <div class="card-body p-4 p-md-5 p-xl-5">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-4">
+                      <h3>Login Toko Buku</h3>
+                      <p>Silakan masuk untuk melanjutkan.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <form id="loginForm">
+                  <div class="row gy-3 overflow-hidden">
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                        <label for="email" class="form-label">Email</label>
+                      </div>
+                    </div>
+                    
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                        <label for="password" class="form-label">Password</label>
+                      </div>
+                    </div>
+
+                    <div class="col-12 mt-4">
+                      <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="submit">Login</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="row mt-4">
+                  <div class="col-12 d-flex justify-content-between">
+                    <button class="btn btn-secondary flex-fill me-2" id="lupaPasswordBtn">Lupa Password</button>
+                    <button class="btn btn-secondary flex-fill ms-2" id="daftarBtn">Daftar</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="lupaPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Lupa Password</h3>
+            <p>Masukkan email Anda untuk menerima link reset password.</p>
+            <input type="email" placeholder="Email Anda" required>
+            <button>Kirim Link</button>
+        </div>
+    </div>
+
+    <div id="daftarModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Daftar Akun Baru</h3>
+            <form id="daftarForm">
+                <p>Silakan isi detail pendaftaran Anda.</p>
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="button" id="submitDaftar">Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="data.mjs"></script> 
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

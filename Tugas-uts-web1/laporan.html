@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pemesanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="laporan-page"> <div class="container">
+        <h1>Laporan Pemesanan (Halaman Admin)</h1>
+        <p>Ringkasan semua transaksi yang tercatat dalam sistem.</p>
+        
+        <table id="laporanTable">
+            <thead>
+                <tr>
+                    <th>Nomor Order</th>
+                    <th>Tanggal</th>
+                    <th>Nama Pemesan</th>
+                    <th>Total Pembayaran</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="laporanTableBody">
+            </tbody>
+        </table>
+
+        <hr>
+        <a href="dashboard.html" class="btn">Kembali ke Dashboard</a>
+    </div>
+
+    <script src="laporan.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku Online</title>
+    <link rel="stylesheet" href="style.css">
+    
+    </head>
+<body class="dashboard-page">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="dashboard.html">
+                    <img src="aset/bookstore_logo.png" alt="BookStore Logo" class="header-logo">
+                    <span>BookStore</span> 
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Cari buku...">
+                <button>🔎</button>
+            </div>
+
+            <div class="nav-icons">
+                <a href="stok.html" class="icon-link" title="Katalog">📚</a>
+                <a href="checkout.html" class="icon-link" title="Pemesanan">🛒</a>
+                <a href="tracking.html" class="icon-link" title="Tracking">🚚</a>
+                <a href="#" onclick="handleLogout()" class="icon-link" title="Logout">🚪</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <h1 id="greeting">Loading Greeting...</h1>
+        <hr>
+        <h2>Menu Utama</h2>
+        
+        <div id="userMenu" class="card-grid" style="display: none;"> 
+            <div class="card">
+                <h3>📚 Stok/Katalog Buku</h3>
+                <p>Lihat dan kelola daftar buku yang tersedia.</p>
+                <a href="stok.html" class="btn">Kunjungi Katalog</a>
+            </div>
+            <div class="card">
+                <h3>🚚 Tracking Pengiriman</h3>
+                <p>Lacak status pesanan yang sedang dalam proses kirim.</p>
+                <a href="tracking.html" class="btn">Lacak Pesanan</a>
+            </div>
+            <div class="card">
+                <h3>🛒 Pemesanan Baru</h3>
+                <p>Buat pemesanan buku baru.</p>
+                <a href="checkout.html" class="btn">Checkout</a>
+            </div>
+        </div>
+        
+        <div id="adminMenu" class="card-grid" style="display: none;">
+            <div class="card">
+                <h3>📦 Kelola Stok & Katalog</h3>
+                <p>Tambah, edit, atau hapus item buku dari katalog utama.</p>
+                <a href="stok.html" class="btn">Kelola Stok</a>
+            </div>
+            <div class="card">
+                <h3>📊 Laporan Pemesanan</h3>
+                <p>Lihat riwayat dan detail semua transaksi yang masuk.</p>
+                <a href="laporan.html" class="btn">Lihat Laporan</a> </div>
+            <div class="card">
+                <h3>👤 Kelola Pengguna</h3>
+                <p>Kelola data akun pengguna dan admin.</p>
+                <a href="kelola_akun.html" class="btn">Kelola Akun</a> </div>
+        </div>
+    </div>
+    
+    <script src="data.mjs"></script>
+    <script src="script.js"></script>
+</body>
+</html>
